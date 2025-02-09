@@ -1,0 +1,94 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Submissions</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+      }
+      th {
+        background: #eee;
+      }
+      .pagination {
+        margin-top: 10px;
+      }
+      .filter {
+        margin-bottom: 10px;
+      }
+      /* Ensure every table row is tall enough */
+      tr {
+        min-height: 150px;
+      }
+      /* Style the response column so that long text is handled nicely */
+      td.response {
+        vertical-align: top;
+        max-height: 200px;
+        overflow-y: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        cursor: pointer;
+        transition: max-height 0.3s ease; /* Add transition for smooth animation */
+      }
+
+      td.response.expanded {
+        max-height: none; /* Remove max-height when expanded */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Submissions</h1>
+
+    <div class="filter">
+      <label> ID: <input type="text" id="filterId" /> </label>
+      <label> Name: <input type="text" id="filterName" /> </label>
+      <label> Email: <input type="text" id="filterEmail" /> </label>
+      <label>
+        Status:
+        <select id="filterStatus">
+          <option value="">All</option>
+          <option value="rejected">Rejected</option>
+          <option value="screening">Screening</option>
+          <option value="interviewing">interviewing</option>
+          <option value="hired">Hired</option>
+          <option value="saved">Saved</option>
+        </select>
+      </label>
+      <button id="applyFilters">Apply Filters</button>
+    </div>
+
+    <table id="submissionsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Created At</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Response</th>
+          <th>Resume</th>
+          <th>Years</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be injected here -->
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prevPage">Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextPage">Next</button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+/* public/style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dashboard-header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-filters {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filters label {
+    margin-right: 5px;
+}
+
+.filters input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filters button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dashboard-content {
+    padding: 20px;
+}
+
+.page-info {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.submissions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.submissions-table thead th {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+}
+
+.submissions-table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.submissions-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.submissions-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.submissions-table tbody td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.submissions-table tbody td a:hover {
+    text-decoration: underline;
+}
+
+.submissions-table tbody td button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    font-size: 0.9em;
+}
+
+.submissions-table tbody td button.save-row {
+    background-color: #007bff;
+}
+
+.submissions-table tbody td button.edit-row {
+    background-color: #ffc107;
+    color: black;
+}
+
+
+.dashboard-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    color: #495057;
+    border-top: 1px solid #ddd;
+    font-size: 0.8em;
+}
