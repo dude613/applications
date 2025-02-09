@@ -1,0 +1,6 @@
+{
+    "name": "applications",
+    "main": "src/app.js",
+    "compatibility_date": "2025-02-09",
+    "kv_namespaces": []
+  }
